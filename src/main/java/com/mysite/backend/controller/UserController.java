@@ -14,6 +14,8 @@ public class UserController {
         this.userRepository = userRepository;
     }
 
+//    @GetMapping("/userphoto")
+//    public List<String> getUserList() { return (List<String>) userRepository.findAllByPhoto(); }
     @GetMapping("/users")
     public List<User> getUsers() {
         return (List<User>) userRepository.findAll();

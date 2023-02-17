@@ -1,30 +1,26 @@
 package com.mysite.backend.db.entity;
 
-import javax.persistence.*;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import jakarta.persistence.*;
+
 
 @Entity
-@Table(name = "usertable")
+@Table
 public class User {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
     private Long id;
+    @Column
     private String firstname;
+    @Column
     private String lastname;
+    @Column
     private String email;
-
+    @Column
     private String photo;
 
-    protected User() {
-    }
+    public User() {
 
-    public User(String firstName, String lastName, String email, String photo) {
-        this.firstname = firstName;
-        this.lastname = lastName;
-        this.email = email;
-        this.photo = photo;
     }
 
     public Long getId() {
@@ -35,20 +31,20 @@ public class User {
         this.id = id;
     }
 
-    public String getFirstName() {
+    public String getFirstname() {
         return firstname;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstname = firstName;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
 
-    public String getLastName() {
+    public String getLastname() {
         return lastname;
     }
 
-    public void setLastName(String lastName) {
-        this.lastname = lastName;
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
     public String getEmail() {
@@ -63,7 +59,15 @@ public class User {
         return photo;
     }
 
-    public void setPhoto(String email) {
+    public void setPhoto(String photo) {
+        this.photo = photo;
+    }
+
+    public User(Long id, String firstname, String lastname, String email, String photo) {
+        this.id = id;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.email = email;
         this.photo = photo;
     }
 
