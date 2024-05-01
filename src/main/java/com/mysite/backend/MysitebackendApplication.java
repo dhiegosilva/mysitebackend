@@ -16,7 +16,7 @@ public class MysitebackendApplication {
 //        return args -> {
 //            Stream.of("dhiego", "lucas", "paulo").forEach(firstname -> {
 //                a.getAndIncrement();
-//                User user = new User(firstname, "silva", firstname.toLowerCase() + "@degussa-goldhandel.de", "giga"+a+".jpg");
+//                Customers user = new Customers(firstname, "silva", firstname.toLowerCase() + "@degussa-goldhandel.de", "giga"+a+".jpg");
 //                userRepository.save(user);
 //
 //            });

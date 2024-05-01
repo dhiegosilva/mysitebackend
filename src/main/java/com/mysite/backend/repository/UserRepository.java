@@ -10,7 +10,8 @@ import java.util.List;
 @Repository
 public interface UserRepository extends JpaRepository<Customers, Long> {
     List<Customers> findAllByPhoto(String photo);
-    @Query(value = "select photo from Customers")
+    @Query(value = """
+            select photo from Customers""")
     List<String> findAllByPhoto();
 
 }
