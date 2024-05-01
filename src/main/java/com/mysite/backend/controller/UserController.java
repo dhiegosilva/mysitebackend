@@ -1,6 +1,6 @@
 package com.mysite.backend.controller;
 import java.util.List;
-import com.mysite.backend.db.entity.User;
+import com.mysite.backend.db.entity.Customers;
 import com.mysite.backend.repository.UserRepository;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,12 +17,12 @@ public class UserController {
 //    @GetMapping("/userphoto")
 //    public List<String> getUserList() { return (List<String>) userRepository.findAllByPhoto(); }
     @GetMapping("/users")
-    public List<User> getUsers() {
-        return (List<User>) userRepository.findAll();
+    public List<Customers> getUsers() {
+        return (List<Customers>) userRepository.findAll();
     }
 
     @PostMapping("/users")
-    void addUser(@RequestBody User user) {
+    void addUser(@RequestBody Customers user) {
         userRepository.save(user);
     }
 
